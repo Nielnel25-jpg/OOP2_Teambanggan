@@ -1,4 +1,4 @@
-# OOP2_Teambanggan Final Proj.
+<img width="1481" height="1784" alt="OOP drawio" src="https://github.com/user-attachments/assets/a4a172cc-9d89-4860-a329-c492fda59b51" /><img width="423" height="195" alt="image" src="https://github.com/user-attachments/assets/88d97954-3708-4bd3-a932-c87395aa215a" /># OOP2_Teambanggan Final Proj.
 ## **SYNOPSIS**
 
 In a world where monsters roam the wild lands, the true heart of adventure lies beneath the earth. Ancient labyrinths, known simply as The Dungeons, the remnants of a forgotten age.
@@ -8,4 +8,10 @@ You lead a fellowship of adventurers on a floor-by-floor descent. There is no gr
 
 **Use Case Diagram**
 <img width="1131" height="642" alt="Use Case Diagram drawio" src="https://github.com/user-attachments/assets/4840867a-07b7-4b61-9cc7-3251270d3476" />
+
+##Class Diagram##
+
+<img width="1481" height="1784" alt="OOP drawio" src="https://github.com/user-attachments/assets/e9f563d1-13c6-4939-aed5-7695fc6e6072" />
+
+
 
