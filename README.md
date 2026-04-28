@@ -1,4 +1,3 @@
-<img width="1481" height="1784" alt="OOP drawio" src="https://github.com/user-attachments/assets/a4a172cc-9d89-4860-a329-c492fda59b51" /><img width="423" height="195" alt="image" src="https://github.com/user-attachments/assets/88d97954-3708-4bd3-a932-c87395aa215a" /># OOP2_Teambanggan Final Proj.
 ## **SYNOPSIS**
 
 In a world where monsters roam the wild lands, the true heart of adventure lies beneath the earth. Ancient labyrinths, known simply as The Dungeons, the remnants of a forgotten age.
