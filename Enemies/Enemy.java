@@ -2,14 +2,14 @@ package OOP2_Teambanggan.Enemy;
 
 import java.util.Random;
 
-public abstract class Enemy{
+public abstract class enemy{
     private Random rand = new Random();
     private String name;
     private int hp;
     private int minDamage;
     private int maxDamage;
 
-    public Enemy(String name, int hp, int minDamage, int maxDamage){
+    public enemy(String name, int hp, int minDamage, int maxDamage){
         this.name = name;
         this.hp = hp;
         this.minDamage = minDamage;
