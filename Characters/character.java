@@ -20,11 +20,11 @@ public abstract class character {
     private int healingSalve;
     private int bottle;
     private int enhanceMango;
-    private int skill1CD;
-    private int skill2CD;
-    private int skill3CD;
+    private int skill1;
+    private int skill2;
+    private int skill3;
 
-    public character(String name, int hp, int energy, int attack, int level, int exp, double money, int skill1CD, int skill2CD, int skill3CD) {
+    public character(String name, int hp, int energy, int attack, int level, int exp, double money, int skill1, int skill2, int skill3) {
         this.name = name;
         this.currentHp = hp;
         this.maxHp = hp;
@@ -34,12 +34,12 @@ public abstract class character {
         this.level = 1;
         this.exp = 0;
         this.money = money;
-        this.skill1CD = skill1CD;
-        this.skill2CD = skill2CD;
-        this.skill3CD = skill3CD;
+        this.skill1 = skill1;
+        this.skill2 = skill2;
+        this.skill3 = skill3;
     }
 
-    // player stats
+    // Player Actions and Status
 
     public int getDamage(){
         return attack;
@@ -91,45 +91,44 @@ public abstract class character {
         this.money -= amount;
     }
 
-    // ---
 
-    // --- canteen og items ---
-    public void addHotDog(int amount){
-        this.hotDog += amount;
+    // Items
+    public void addTanggo(int amount){
+        this.tanggo += amount;
     }
-    public void addRiceToppings(int amount){
-        this.riceToppings += amount;
+    public void addHealingSalve(int amount){
+        this.healingSalve += amount;
     }
-    public void addWater(int amount){
-        this.water += amount;
+    public void addBottle(int amount){
+        this.bottle += amount;
     }
-    public void addMountainDew(int amount){
-        this.mountainDew += amount;
+    public void addEnhanceMango(int amount){
+        this.enhanceMango += amount;
     }
 
-    public void useHotDog(){
+    public void useTanggo(){
         heal(20);
-        this.hotDog -= 1;
-        System.out.println(name + " consumed hot dog, +20 HP" );
+        this.tanggo -= 1;
+        System.out.println(name + " consumed tanggo, +20 HP" );
     }
-    public void useRiceTopping(){
+    public void useHealingSalve(){
         heal(30);
-        this.riceToppings -= 1;
-        System.out.println(name + " consumed rice Topping, +20 HP" );
+        this.healingSalve -= 1;
+        System.out.println(name + " consumed healing salve, +30 HP" );
     }
-    public void useWater(){
+    public void useBottle(){
         addEnergy(15);
-        this.water -= 1;
-        System.out.println(name + " consumed water, +20 energy" );
+        this.bottle -= 1;
+        System.out.println(name + " consumed bottle, +15 energy" );
     }
-    public void useMountainDew(){
+    public void useEnhanceMango(){
         addEnergy(30);
-        this.mountainDew -= 1;
-        System.out.println(name + " consumed mountain dew, +30 energy" );
+        this.enhanceMango -= 1;
+        System.out.println(name + " consumed enhance mango, +30 energy" );
     }
 
 
-    //--
+    // Getters and Setters
 
     public String getName() { 
         return name; 
@@ -167,17 +166,17 @@ public abstract class character {
         this.currentEnergy = currentEnergy;
     }
 
-    public int getHotDog(){
-        return hotDog;
+    public int getTanggo(){
+        return tanggo;
     }
-    public int getRiceToppings(){
-        return riceToppings;
+    public int getHealingSalve(){
+        return healingSalve;
     }
-    public int getWater(){
-        return water;
+    public int getBottle(){
+        return bottle;
     }
-    public int getMountainDew(){
-        return mountainDew;
+    public int getEnhanceMango(){
+        return enhanceMango;
     }
 
 
@@ -201,30 +200,30 @@ public abstract class character {
     }
 
     // cooldown 
-    public int getSkill1CD() { return skill1CD; }
-    public int getSkill2CD() { return skill2CD; }
-    public int getSkill3CD() { return skill3CD; }
+    public int getSkill1CD() { return skill1; }
+    public int getSkill2CD() { return skill2; }
+    public int getSkill3CD() { return skill3; }
 
-    public void setSKill1CD(int skill1CD){
-        this.skill1CD = skill1CD;
+    public void setSkill1(int skill1){
+        this.skill1 = skill1;
     }
-    public void setSKill2CD(int skill2CD){
-        this.skill2CD = skill2CD;
+    public void setSkill2(int skill2){
+        this.skill2 = skill2;
     }
-    public void setSKill3CD(int skill3CD){
-        this.skill3CD = skill3CD;
+    public void setSSkill3(int skill3){
+        this.skill3 = skill3;
     }
 
     public void reduceCooldowns(){
-        if (skill1CD > 0) skill1CD--;
-        if (skill2CD > 0) skill2CD--;
-        if (skill3CD > 0) skill3CD--;
+        if (skill1 > 0) skill1--;
+        if (skill2 > 0) skill2--;
+        if (skill3 > 0) skill3--;
     }
 
     
-    // skills
+    // Hero Skills 
     public abstract void displaySkills();
-    public abstract void useBasic(enemy enemy);
+    public abstract void useBasic(Enemy enemy);
     public abstract void useSkill1(enemy enemy);
     public abstract void useSkill2(enemy enemy);
     public abstract void useSkill3(enemy enemy);
